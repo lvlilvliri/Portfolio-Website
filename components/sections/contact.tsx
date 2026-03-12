@@ -75,7 +75,7 @@ export const Contact: React.FC<Props> = ({ className }) => {
             <motion.div
               key="form"
               layoutId="contact-card"
-              className="absolute bg-zinc-900 border border-zinc-800 p-4 rounded-xl w-[400px]"
+              className="absolute bg-zinc-900 border border-zinc-800 p-4 rounded-xl sm:w-80 md:w-96 lg:w-105 w-75"
               transition={{ type: "spring", stiffness: 260, damping: 20 }}
             >
               <motion.form

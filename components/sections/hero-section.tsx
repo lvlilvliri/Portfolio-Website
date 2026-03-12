@@ -13,10 +13,10 @@ interface Props {
 export const HeroSection: React.FC<Props> = ({ className }) => {
   const text = useTypewriter(
     [
-      { text: "that scale." },
-      { text: "that perform." },
-      { text: "that users love." },
-      { text: "that solve problems." },
+      { text: "hat scale." },
+      { text: "hat perform." },
+      { text: "hat users love." },
+      { text: "hat solve problems." },
     ],
     { loop: true, speed: 40, deleteSpeed: 20, pause: 2000 },
   );
@@ -43,8 +43,8 @@ export const HeroSection: React.FC<Props> = ({ className }) => {
       >
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tighter text-zinc-100 leading-tight">
           Building digital <br className="hidden sm:block" />
-          <span className="text-transparent bg-clip-text bg-linear-to-r from-zinc-200 to-zinc-500 whitespace-nowrap">
-            experiences {text}
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-zinc-200 to-zinc-500 md:whitespace-nowrap">
+            experiences <br className="lg:hidden block" /> t{text}
           </span>
         </h1>
         <p className="text-lg sm:text-xl text-zinc-400 max-w-2xl leading-relaxed">

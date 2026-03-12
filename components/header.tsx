@@ -6,12 +6,14 @@ import Link from "next/link";
 import { Cat } from "lucide-react";
 import { KittySpring } from "./kitty-spring";
 import { YarnCursor } from "./yarn-cursor";
+import { useMedia } from "react-use";
 
 interface Props {
   className?: string;
 }
 
 export const Header: React.FC<Props> = ({ className }) => {
+  const isMobile = useMedia("(max-width: 768px)", true);
   const [kittySpring, setKittySpring] = React.useState(false);
 
   useEffect(() => {
@@ -31,18 +33,22 @@ export const Header: React.FC<Props> = ({ className }) => {
   return (
     <header className="sticky top-0 z-50 backdrop-blur-md bg-zinc-950/80 border-b border-white/5">
       <div className="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
-        {kittySpring && (
+        {!isMobile && (
           <>
-            <KittySpring />
-            <YarnCursor />
+            {kittySpring && (
+              <>
+                <KittySpring />
+                <YarnCursor />
+              </>
+            )}
+            <button
+              onClick={() => setKittySpring(!kittySpring)}
+              className="text-sm font-semibold tracking-tight hover:text-zinc-300 transition-colors cursor-pointer"
+            >
+              <Cat />
+            </button>
           </>
         )}
-        <button
-          onClick={() => setKittySpring(!kittySpring)}
-          className="text-sm font-semibold tracking-tight hover:text-zinc-300 transition-colors cursor-pointer"
-        >
-          <Cat />
-        </button>
 
         <nav className="flex items-center gap-6 text-sm text-zinc-400 font-medium">
           <Link
