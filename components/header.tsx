@@ -52,7 +52,7 @@ export const Header: React.FC<Props> = ({ className }) => {
 
         <nav className="flex items-center gap-6 text-sm text-zinc-400 font-medium">
           <a
-            href="/Viacheslav-Lukianets-CV.pdf"
+            href="/Viacheslav-Lukianets-Frontend-Developer.pdf"
             download
             className="hover:text-zinc-50 transition-colors"
           >
