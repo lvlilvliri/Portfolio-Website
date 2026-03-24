@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { PageTransition } from "@/components/page-transtition";
 import { Toaster } from "react-hot-toast";
 
 const geistSans = Geist({
@@ -34,8 +33,8 @@ export default function RootLayout({
         <div className="min-h-screen bg-zinc-950 text-zinc-50 font-sans selection:bg-zinc-800 selection:text-zinc-50 overflow-x-hidden">
           <Header />
 
-          <main className="max-w-4xl mx-auto px-6 py-16 sm:pb-24 md:pb-32 relative">
-            <PageTransition>{children}</PageTransition>
+          <main className="max-w-4xl mx-auto px-6 py-26 sm:pb-24 md:pb-32 relative">
+            {children}
           </main>
 
           <Footer />

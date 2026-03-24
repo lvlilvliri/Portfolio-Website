@@ -9,13 +9,18 @@ import {
   ProjectNav,
   ProjectSidebar,
 } from "@/components/index";
+import { useEffect } from "react";
 
 export default function ProjectDetails() {
   const { slug } = useParams<{ slug: string }>();
   const project = projectsDb[slug];
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0 });
+  }, []);
+
   return (
-    <article className="space-y-12 pb-16">
+    <article className="space-y-14 pb-12">
       {/* Navigation */}
       <ProjectNav project={project} />
 

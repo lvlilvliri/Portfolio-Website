@@ -24,11 +24,11 @@ export const Projects: React.FC<Props> = ({ className }) => {
           <MotionLink
             key={i}
             href={"/projects/" + project.link}
-            rel="noopener noreferrer"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: i * 0.1 }}
+            scroll={true}
             className="group block relative rounded-xl border border-zinc-800/50 bg-zinc-900/20 overflow-hidden hover:bg-zinc-800/40 hover:border-zinc-700/50 transition-all duration-300"
           >
             <div className="aspect-video overflow-hidden bg-zinc-800 relative">

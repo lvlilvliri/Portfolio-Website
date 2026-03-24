@@ -31,7 +31,7 @@ export const Header: React.FC<Props> = ({ className }) => {
   const text = useTypewriter([{ text: "Hello!", delay: 2000 }]);
 
   return (
-    <header className="sticky top-0 z-50 backdrop-blur-md bg-zinc-950/80 border-b border-white/5">
+    <header className="fixed top-0 z-50 backdrop-blur-md bg-zinc-950/80 border-b border-white/5 w-full">
       <div className="max-w-4xl mx-auto px-6 h-16 flex items-center justify-between">
         {!isMobile && (
           <>
